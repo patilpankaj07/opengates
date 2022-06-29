@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="https://kit.fontawesome.com/cd5cbc1ff1.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        body {
+            margin: 0;
+            padding: 10;
+            background-color: rgb(195, 246, 246);
+            }
+        h1 {
+            color: black;
+            text-align: center;
+            font-size:xx-large;
+            border: 0ch;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        h2 {
+            color:black;
+            text-decoration: dotted;
+            text-align:center;
+            font-size: xx-large;
+            border: 100ch;
+        }
+        p {color: black;
+            text-decoration: solid;
+            text-align: start;
+            font-size: small;
+            border: 0ch;
+        }
+        .login {
+        background-color: #04AA6D;
+         color: white;
+         padding: 14px 20px;
+         margin: 8px 0;
+         border: none;
+         cursor: pointer;
+         width: 10%;
+         position: relative;
+         left: 45%;
+        }
+        .search-box{
+            position: absolute;
+            background: #2f3640;;
+            top: 10%;
+            left: 80%;
+            transform: translate(-50%,-50%);
+            height: 50px;
+            border-radius: 50px;
+            }
+            .search-box:hover > .search-txt{
+                width: 240px;
+                padding:5px;
+            }
+            .search-box:hover > .search-btn{
+                background: rgb(250, 10, 10);
+            }
+            .search-btn{
+                color: white;
+                float: right;
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                background: #2f3640;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+                
+            }
+            .search-txt{
+                border: none;
+                background: none;
+                outline: none;
+                float: left;
+                padding: 0;
+                color: white;
+                font-size: 16px;
+                transition: 0.4s;
+                line-height: 40px;
+                width: 0px
+            }
+            * {
+            box-sizing: border-box
+        }
+        /* Set height of body and the document to 100% */
+        
+        
+        .tab{
+            height: 1000%;
+            position: relative;
+            font-family: Arial;
+            margin-top: 20%;
+            
+        }
+        /* Style tab links */
+        
+        .tablink {
+            background-color: #555;
+            color: white;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            font-size: 17px;
+            width: 20%;
+            
+        }
+        
+        .tablink:hover {
+            background-color: #777;
+        }
+        /* Style the tab content (and add height:100% for full page content) */
+        
+        .tabcontent {
+            color: white;
+            display: none;
+            padding: 100px 20px;
+            height: 70%;
+        }
+        
+        #Home {
+            background-color: yellow;
+        }
+        
+        #Acadmics {
+            background-color: green;
+        }
+        
+        #Contact {
+            background-color: blue;
+        }
+        
+        #About {
+            background-color: orange;
+        }
+
+        #Sports {
+            background-color: pink;
+        }
+    
+           
+        
+    </style>
+    
+    
+    
+</head>
+<body>
+    <b><i><u><h1>OPENGATES</h1></u></i></b>
+    <h2>Interactive Portal For Freshies</h2>
+    <div class="search-box">
+        <input class="search-txt" type="text" name="" placeholder="Type to search">
+        <a class="search-btn" href="#">
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+        </a>
+    </div>
+
+    <div class="login">
+        <a href="login.html"><b><u>Login</u></b></a>
+    </div>
+
+
+    <div class="tab">
+        <button class="tablink" onclick="openPage('Home', this, 'yellow')">Home</button>
+        <button class="tablink" onclick="openPage('Acadmics', this, 'green')">Acadmics</button>
+        <button class="tablink" onclick="openPage('Contact', this, 'blue')">Contact</button>
+        <button class="tablink" onclick="openPage('About', this, 'orange')">About</button>
+        <button class="tablink" onclick="openPage('Sports', this, 'pink')">Sports</button>
+    </div>
+    
+
+    <div id="Home" class="tabcontent">
+        <h3>Home</h3>
+        <p>Home is where the heart is</p>
+    </div>
+
+    <div id="Acadmics" class="tabcontent">
+        <h3>Acadmics</h3>
+        <p>Some Acadmics this fine day</p>
+    </div>
+
+    <div id="Contact" class="tabcontent">
+        <h3>Contact</h3>
+        <p>Get in touch, or swing by for a cup of coffee.</p>
+    </div>
+
+    <div id="About" class="tabcontent">
+        <h3>About</h3>
+        <p>Who we are and what we do.</p>
+    </div>
+
+    <div id="Sports" class="tabcontent">
+        <h3>Sports</h3>
+        <p>Who we are and what we do.</p>
+    </div>
+    
+
+    <script>
+        function openPage(pageName, elmnt, color) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablink");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].style.backgroundColor = "";
+            }
+            document.getElementById(pageName).style.display = "block";
+            elmnt.style.backgroundColor = color;
+        }
+
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+    </script>
+    
+
+    
+
+</body>
+</html>
+

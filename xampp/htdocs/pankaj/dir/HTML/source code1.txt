@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: aliceblue;
+        }
+        h1 {
+            color: rgb(2, 1, 18);
+            text-align: center;
+            font-size:xx-large;
+            border: 0ch;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        h2 {
+            color: rgb(0, 13, 255);
+            text-decoration: dotted;
+            text-align:center;
+            font-size: xx-large;
+            border: 100ch;
+        }
+        p {color: black;
+            text-decoration: solid;
+            text-align: start;
+            font-size: small;
+            border: 0ch;
+        }
+        .search-box{
+            position: absolute;
+            background: #2f3640;;
+            top: 30%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            height: 30px;
+            border-radius: 50px;
+            
+        }
+        
+    </style>
+</head>
+<body>
+    <b><i><u><h1>OPENGATES</h1></u></i></b>
+    <h2>Interactive Portal For Freshies</h2>
+    <div class="search-box">
+        <input class="search-txt" type="text" name="" placeholder="Type to search">
+        <a class="search-btn" href="#">
+
+        </a>
+    </div>
+</body>
+</html>
+
